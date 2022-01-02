@@ -17,6 +17,7 @@ def change(x,y):
     aim_x=x
     aim_y=y
 
+
 #定义inside函数判断蛇是否在队列里（inside_snake）
 def inside_snake():
     for n in range(len(snake)-1):
