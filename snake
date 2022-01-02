@@ -43,3 +43,23 @@ def gameLoop():
     else :
         apple_x=randrange(-20,18)*10
         apple_y=randrange(-19,19)*10
+    #蛇撞墙或要到自己死亡后重新开启下一局游戏，使游戏一直运行
+    if (not inside_map()) or inside_snake():
+        square(snake[-1][0],snake[-1][1],10,"red")
+        update()
+        sleep(2)
+        snake=[[0,0],[10,0],[20,0],[30,0],[40,0],[50,0]]
+        apple_x=randrange(-20,18)*10
+        apple_y=randrange(-19,19)*10
+        aim_x=0
+        aim_y=10 
+    
+    #蛇吃到苹果后的苹果消失动画使游戏运行更流畅
+    clear()
+    square(-210,-200,410,"black")
+    square(-200,-190,390,"white")
+    square(apple_x,apple_y,10,"red")
+    for n in range(len(snake)):
+        square(snake[n][0],snake[n][1],10,"black")
+    update()
+    ontimer(gameLoop,200)
