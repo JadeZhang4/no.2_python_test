@@ -31,3 +31,14 @@ def inside_map():
         return True 
     else : 
         return False
+
+#定义主循环程序函数
+def gameLoop():
+    global apple_x,apple_y,aim_x,aim_y,snake                    
+    snake.append([ snake[-1][0]+aim_x , snake[-1][1]+aim_y ])
+    #蛇没吃到苹果就删除苹果坐标，吃到苹果则新加苹果坐标
+    if snake[-1][0]!=apple_x or snake[-1][1]!=apple_y:
+        snake.pop(0)
+    else :
+        apple_x=randrange(-20,18)*10
+        apple_y=randrange(-19,19)*10
