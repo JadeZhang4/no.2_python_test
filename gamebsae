@@ -1,10 +1,11 @@
+#导入海龟库的库函数
 from turtle import *
 
 def square(x,y,size,color_name):
-    up()
-    goto(x, y)
-    down()
-    color(color_name)
+    up()#提笔
+    goto(x, y)#去到此处
+    down()#落笔
+    color(color_name)#设置笔的颜色
     begin_fill()
 
     forward(size)
