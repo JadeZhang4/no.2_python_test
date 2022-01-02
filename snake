@@ -17,3 +17,15 @@ def change(x,y):
     aim_x=x
     aim_y=y
 
+def inside_snake():
+    for n in range(len(snake)-1):
+        if snake[-1][0] == snake[n][0] and snake[-1][1]==snake[n][1]:
+            return True
+
+    return False
+
+def inside_map():
+    if -200<=snake[-1][0]<=180 and -190<=snake[-1][1]<=190:
+        return True 
+    else : 
+        return False
