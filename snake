@@ -1,1 +1,19 @@
+#引用数据库与函数
+from turtle import *
+from gamebase import square
+from random import randrange
+from time import sleep
+
+#定义变量
+snake=[[0,0],[10,0],[20,0],[30,0],[40,0],[50,0]]
+apple_x=randrange(-20,18)*10
+apple_y=randrange(-19,19)*10
+aim_x=0
+aim_y=10
+
+#定义函数
+def change(x,y):
+    global aim_x,aim_y
+    aim_x=x
+    aim_y=y
 
