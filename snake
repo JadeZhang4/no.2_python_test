@@ -33,7 +33,7 @@ def inside_map():
     else : 
         return False
 
-#定义主循环程序函数
+#定义进行游戏规则逻辑的函数
 def gameLoop():
     global apple_x,apple_y,aim_x,aim_y,snake                    
     snake.append([ snake[-1][0]+aim_x , snake[-1][1]+aim_y ])
